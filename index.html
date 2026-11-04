@@ -1,54 +1,14 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#000000" />
-  <title>SYSTEMBREACH</title>
-  <meta name="description" content="An interactive simulation-breach experience: decode the rain, bend time, outrun the sentinels and escape." />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <canvas id="rain" aria-hidden="true"></canvas>
-
-  <div id="crt">
-    <header id="hud" hidden>
-      <div class="hud-left">
-        <button id="menu-btn" class="hud-btn" aria-label="Open chapter map">≡ MAP</button>
-        <span id="hud-chapter">00 // BOOT</span>
-      </div>
-      <div class="hud-right">
-        <div id="threat" title="System threat level">
-          <span class="label">THREAT</span>
-          <div class="bar"><div class="fill"></div></div>
-          <span class="val">0%</span>
-        </div>
-        <button id="mute-btn" class="hud-btn" aria-label="Toggle sound">SND:ON</button>
-      </div>
-    </header>
-
-    <main id="stage" aria-live="polite"></main>
-
-    <div id="toast" role="status"></div>
-  </div>
-
-  <div id="map" hidden>
-    <div class="win map-win">
-      <div class="win-title"><span>CHAPTER MAP</span><button class="win-x" id="map-close" aria-label="Close">×</button></div>
-      <ol id="map-list"></ol>
-      <div class="map-foot">
-        <button class="btn ghost" id="reset-btn">WIPE PROGRESS</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="fx-scan" aria-hidden="true"></div>
-  <div id="fx-vignette" aria-hidden="true"></div>
-  <div id="fx-glitch" aria-hidden="true"></div>
-
-  <script type="importmap">
-    { "imports": { "three": "./vendor/three.module.min.js" } }
-  </script>
-  <script type="module" src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#020503" />
+    <meta name="description" content="An unofficial, Matrix-inspired interactive simulation: investigate your reality, choose a pill, train in the Construct, evade Agents and attempt to escape." />
+    <title>THE MATRIX — SYSTEM BREACH</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
