@@ -4,3 +4,5 @@ dist/
 *.log
 *.tsbuildinfo
 e2e/shots/
+videos/
+e2e/record/state.json

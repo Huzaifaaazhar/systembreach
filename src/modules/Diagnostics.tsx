@@ -110,7 +110,7 @@ export default function Diagnostics() {
                   {isOpen && (
                     <div className="fade-in mt-3" ref={(el) => el?.scrollIntoView({ block: 'nearest', behavior: 'smooth' })}>
                       <Inv
-                        onFound={() => { sfx.win(); s.discoverAnomaly(id); setTimeout(() => setOpen(null), 1600); }}
+                        onFound={() => { sfx.win(); s.discoverAnomaly(id); setTimeout(() => setOpen((cur) => (cur === id ? null : cur)), 1600); }}
                         onWrong={(why) => { sfx.err(); s.addThreat(2, why); }}
                       />
                     </div>
